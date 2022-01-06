@@ -72,9 +72,18 @@ Vars are assigned with `let`, like in Nim. Unlike Nim, there is no mutable `var`
 ```
 
 ### Conditionals
-
+Pretty easy:
+```rust
+ if n == "Husky" {
+            println!("Oh hai guy");
+        } else if n == "Taggart" {
+            println!("Hey Tag :)")
+        } else {
+            println!("Hello, {}", n);
+```
 
 ### Loops
+Also pretty easy:
 ```rust
   // for loop in rust!
     for n in names {
@@ -89,6 +98,17 @@ Vars are assigned with `let`, like in Nim. Unlike Nim, there is no mutable `var`
 ```
 
 ### Functions
+```rust
+// fn is the function declarer
+fn exclaim(n: &str) -> String{
+    let mut res = String::from(n);
+    res.push_str("!");
+    
+    // if you omit the return statement, it is implied
+    // i.e. if you just write 'res', the same thing happens
+    return res;
+}
+```
 
 ## Rust Macros
 Macros operate on the text of the code. 
