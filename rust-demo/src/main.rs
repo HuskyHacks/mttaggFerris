@@ -1,3 +1,24 @@
+struct Student{
+    // Rust has no classes, so all class like objects are structs
+    first_name: String,
+    last_name: String,
+    id: u32
+}
+
+//Instantiate a struct with impl
+
+impl Student {
+    fn new(first: &str, last: &str, id: u32) -> Student {
+        Student{
+        first_name: String::from(first),
+        last_name: String::from(last),
+        id
+    }
+}
+
+}
+
+
 // fn is the function declarer
 fn exclaim(n: &str) -> String{
     let mut res = String::from(n);
@@ -10,11 +31,11 @@ fn exclaim(n: &str) -> String{
 
 fn main() {
     // A Vec is like a list in Python 
-    let names: Vec<&str> = vec!["Tag", "Husky", "D0nut", "GoPro"];
-    let exclaimed: Vec<String> = names
-    .into_iter()
-    .map(exclaim)
-    .collect();
+    // let names: Vec<&str> = vec!["Tag", "Husky", "D0nut", "GoPro"];
+    //let exclaimed: Vec<String> = names
+    //.into_iter()
+    //.map(exclaim)
+    //.collect();
     // var keyword is 'let' like in Nim   
     // let is immutable, but there is no "mutable" variable like var
     // if you want to have a changable var, you need to give it the mut keyword
@@ -22,32 +43,34 @@ fn main() {
     // there is also String type
     //let name: &str = "Husky";
 
+    let new_student = Student::new("Husky", "Hacks", 1);
+
 
     // closures
-    let num: Vec<u32> = (1..10).collect();
+    //let num: Vec<u32> = (1..10).collect();
 
-    let squares: Vec<u32> = num
-    .into_iter()
+    //let squares: Vec<u32> = num
+    //.into_iter()
     // map and return a new value
-    .map(|n:u32| n * n)
-    .collect();
+    //.map(|n:u32| n * n)
+    //.collect();
 
-    for s in squares {
-        println!("{}", s)
-    }
+    //for s in squares {
+    //    println!("{}", s)
+    //}
 
 
     // for loop in rust!
-    for n in exclaimed {
+    //for n in exclaimed {
         // conditionals!
         //if n == "Husky" {
         //    println!("Oh hai guy");
         //} else if n == "Taggart" {
          //   println!("Hey Tag :)")
         //} else {
-            println!("Hello, {}", n);
+        //    println!("Hello, {}", n);
         // println is actually a macro (meta programming)
         // builds new code to perform a given function
-        }
+        //}
     }
 
