@@ -18,3 +18,6 @@ Reload PATH in current shell:
 ```
 $ source $HOME/.cargo/env
 ```
+
+## Why Should I Care About Rust?
+Speed? Speed is cool and all but the way Rust really shines is its ability to allow for collaboration and express ideas in code.
