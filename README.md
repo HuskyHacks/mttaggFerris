@@ -116,3 +116,6 @@ Macros operate on the text of the code.
 WHen you give a macro a string, it works the abstract syntax tree to build Rust code based on what you provided.
 
 d0nutptr: "when you write vec![1, (2 + 2), 3, 4] rust doesn't see text, it literally sees expressions in the abstract syntax tree and can apply syntax rules that only apply to expressions"
+
+## Crates.io
+Package repo for rust.
