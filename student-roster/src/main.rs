@@ -34,7 +34,13 @@ fn main() {
         None => panic!("I need a file name!"),
         Some(f) => {
             let data = fs::read_to_string(f).unwrap();
-            println!("{}", data)            
+            let rows: Vec<Vec<&str>> = data
+            .split("\n")
+            .map(|r|{
+                r.split(",").collect::<Vec<&str>>()
+            })
+            .collect();
+            println!("{:?}", rows)            
     }
     }
 }
