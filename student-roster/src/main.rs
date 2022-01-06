@@ -1,6 +1,8 @@
 use std::env;
 use std::fmt;
 use std::fmt::Display;
+use std::fs::File;
+use std::fs;
 
 struct Student{
     // Rust has no classes, so all class like objects are structs
@@ -30,7 +32,9 @@ fn main() {
     
     match file_name{
         None => panic!("I need a file name!"),
-        Some(f) => {println!("{}", f)}
+        Some(f) => {
+            let data = fs::read_to_string(f).unwrap();
+            println!("{}", data)            
     }
-
+    }
 }
