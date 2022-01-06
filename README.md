@@ -1,5 +1,7 @@
 # mttaggFerris
-Taggart's Intro to Rust Stream
+Taggart's Intro to Rust Stream 1/5/22
+
+https://youtu.be/UWVBp5kpxFk
 
 Interesting tidbits:
 - Rust binaries are (usually) statically compiled, so they're thicc.
