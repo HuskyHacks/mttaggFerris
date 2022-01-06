@@ -22,6 +22,21 @@ fn main() {
     // there is also String type
     //let name: &str = "Husky";
 
+
+    // closures
+    let num: Vec<u32> = (1..10).collect();
+
+    let squares: Vec<u32> = num
+    .into_iter()
+    // map and return a new value
+    .map(|n:u32| n * n)
+    .collect();
+
+    for s in squares {
+        println!("{}", s)
+    }
+
+
     // for loop in rust!
     for n in exclaimed {
         // conditionals!
