@@ -75,7 +75,18 @@ Vars are assigned with `let`, like in Nim. Unlike Nim, there is no mutable `var`
 
 
 ### Loops
+```rust
+  // for loop in rust!
+    for n in names {
+        // conditionals!
+        if n == "Husky" {
+            println!("Oh hai guy");
+        } else if n == "Taggart" {
+            println!("Hey Tag :)")
+        } else {
+            println!("Hello, {}", n);
 
+```
 
 ### Functions
 
