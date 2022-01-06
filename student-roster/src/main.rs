@@ -1,3 +1,7 @@
+use std::env;
+use std::fmt;
+use std::fmt::Display;
+
 struct Student{
     // Rust has no classes, so all class like objects are structs
     first_name: String,
@@ -20,5 +24,13 @@ impl Student {
 
 
 fn main() {
-    println!("Hello, world!");
+
+    // read file from args
+    let file_name = env::args().nth(1);
+    
+    match file_name{
+        None => panic!("I need a file name!"),
+        Some(f) => {println!("{}", f)}
+    }
+
 }
