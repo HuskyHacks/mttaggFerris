@@ -48,6 +48,11 @@ $ cargo run
 ```
 ... from the working directory runs the code from the entrypoint.
 
+```
+$ cargo build --release
+```
+To make compiled, optomized binary
+
 ## VS Code Rust Analyzer plugin
 Download rust-analyzer. It's number two if you search plugins for rust. It's better than the first hit.
 
